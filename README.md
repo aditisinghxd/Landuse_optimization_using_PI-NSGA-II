@@ -6,11 +6,14 @@ for raster-based land-use allocation. Decision maker (DM) preferences are
 learned progressively during the optimization and used to steer the search
 toward preferred regions of the Pareto front.
 
-This code accompanies the article:
+> **Status:** The article describing this software is currently under review.
+> Citation details will be added here once it is published.
 
-> Singh, A., Kropp, I., Kaim, A. (2026). *Interactive Multi-Objective Optimization
-> Algorithm for Spatially Explicit Land-Use Allocation Problems*. Submitted to
-> Environmental Modelling & Software.
+This code accompanies the manuscript:
+
+> Singh, A., Kropp, I., Kaim, A. *Interactive Multi-Objective Optimization
+> Algorithm for Spatially Explicit Land-Use Allocation Problems*.
+> Manuscript submitted for publication.
 
 It builds on the Master's thesis *"Preference-based Multi-Objective Optimization
 of Land-Use Allocation using PI-NSGA-II"* (M.Sc. Data Science,
@@ -115,9 +118,9 @@ python -c "import pymoo, os; print(os.path.join(os.path.dirname(pymoo.__file__),
 
 ---
 
-## Reproducing the results in the article
+## Reproducing the results in the manuscript
 
-The experiments in the article use the parameter settings listed in its
+The experiments in the manuscript use the parameter settings listed in its
 experimental design tables (automated DM: Table [3]; manual DM: Table [4]).
 Automated DM configurations were repeated 30 times and manual DM scenarios
 10 times. [The result files used in the article are provided in `results/`.]
@@ -126,7 +129,13 @@ Automated DM configurations were repeated 30 times and manual DM scenarios
 
 ## Citation
 
-If you use this code, please cite the article above. [Add the DOI once published.]
+The associated article is not yet published. Until then, please cite this
+repository:
+
+> Singh, A. (2026). *Spatially Explicit PI-NSGA-II for Land-Use Allocation*
+> [software]. GitHub. https://github.com/aditisinghxd/Landuse_optimization_using_PI-NSGA-II
+
+The full article citation and DOI will be added here after publication.
 
 ---
 

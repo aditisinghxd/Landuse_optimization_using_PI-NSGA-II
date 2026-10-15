@@ -1,3 +1,14 @@
+# This file is a modified version of pymoo/algorithms/moo/pinsga2.py from
+# pymoo-pi-emo (https://github.com/Human-Centered-Optimization-Lab/pymoo-pi-emo,
+# branch feature/pinsga2), a fork of pymoo (https://github.com/anyoptimization/pymoo),
+# Copyright (c) Julian Blank and contributors.
+# Licensed under the Apache License, Version 2.0 (see LICENSE-APACHE in this folder).
+#
+# Modified by Aditi Singh, 2025: candidate genomes (X) are passed to the decision
+# step so that the manual decision-maker GUI (helper/gui_input.py) can display
+# the corresponding land-use maps.
+
+
 import numpy as np
 import sys
 

@@ -61,30 +61,56 @@ update_pinsga_file_in_pymoo-pi-emo/
 
 ## Requirements
 
-- Python 3.[x]
-- [pymoo](https://pymoo.org) [version], with the modified `pinsga2.py` from this repository (see Installation)
-- NumPy, pandas, Matplotlib
+- Python 3.9
+- [pymoo-pi-emo](https://github.com/Human-Centered-Optimization-Lab/pymoo-pi-emo), branch `feature/pinsga2`
+  (pymoo 0.6.0.1 with PI-NSGA-II), installed with the modified `pinsga2.py` from this repository (see Installation).
+  Its dependencies (NumPy, SciPy, Matplotlib, etc.) are installed automatically.
+- pandas
 - Tkinter (included with most Python installations; needed for the manual DM)
-
-Exact versions are listed in `requirements.txt`.
+- Recommended: Anaconda or Miniconda for managing the environment
 
 ---
 
 ## Installation
 
-```bash
-git clone https://github.com/aditisinghxd/Landuse_optimization_using_PI-NSGA-II.git
-cd Landuse_optimization_using_PI-NSGA-II
-pip install -r requirements.txt
-```
+1. Clone this repository:
 
-**Replace the pymoo PI-NSGA-II file.** This project needs the modified
-`pinsga2.py`. Copy it over the file in your pymoo installation:
+   ```bash
+   git clone https://github.com/aditisinghxd/Landuse_optimization_using_PI-NSGA-II.git
+   cd Landuse_optimization_using_PI-NSGA-II
+   ```
 
-```bash
-python -c "import pymoo, os; print(os.path.join(os.path.dirname(pymoo.__file__), 'algorithms', 'moo'))"
-# copy update_pinsga_file_in_pymoo-pi-emo/pinsga2.py into the folder printed above
-```
+2. Create and activate a conda environment:
+
+   ```bash
+   conda create -n pinsga2env python=3.9 -y
+   conda activate pinsga2env
+   ```
+
+3. Clone pymoo-pi-emo and switch to the PI-NSGA-II branch:
+
+   ```bash
+   git clone https://github.com/Human-Centered-Optimization-Lab/pymoo-pi-emo.git
+   cd pymoo-pi-emo
+   git checkout feature/pinsga2
+   ```
+
+4. Replace `pymoo-pi-emo/pymoo/algorithms/moo/pinsga2.py` with the file
+   `update_pinsga_file_in_pymoo-pi-emo/pinsga2.py` from this repository.
+   The modified version passes the candidate genomes to the decision step so
+   that the manual DM window can display the corresponding land-use maps.
+
+5. Install the modified pymoo and pandas:
+
+   ```bash
+   pip install .
+   conda install pandas -y
+   cd ..
+   ```
+
+For later use, activate the environment (`conda activate pinsga2env`) and run
+the script as described below. Step-by-step instructions are also provided in
+`Land use optimization using PI-NSGA-II.pdf`.
 
 ---
 
@@ -121,9 +147,9 @@ python -c "import pymoo, os; print(os.path.join(os.path.dirname(pymoo.__file__),
 ## Reproducing the results in the manuscript
 
 The experiments in the manuscript use the parameter settings listed in its
-experimental design tables (automated DM: Table [3]; manual DM: Table [4]).
+experimental design tables (automated DM: Table 2; manual DM: Table 3).
 Automated DM configurations were repeated 30 times and manual DM scenarios
-10 times. [The result files used in the article are provided in `results/`.]
+10 times. The results can be reproduced with the provided code and input data.
 
 ---
 
@@ -141,10 +167,15 @@ The full article citation and DOI will be added here after publication.
 
 ## License
 
-This project is licensed under the [MIT] License (see `LICENSE`).
-The file `update_pinsga_file_in_pymoo-pi-emo/pinsga2.py` is a modified version
-of pymoo's PI-NSGA-II implementation and remains under pymoo's Apache License 2.0.
+Copyright (c) 2025 Aditi Singh. All rights reserved until publication of the
+associated article (see `LICENSE`). The code may be used for review and
+reproducibility purposes. An open-source license will be applied upon publication.
+
+The file `update_pinsga_file_in_pymoo-pi-emo/pinsga2.py` is a modified version of
+`pinsga2.py` from [pymoo-pi-emo](https://github.com/Human-Centered-Optimization-Lab/pymoo-pi-emo)
+(a fork of [pymoo](https://github.com/anyoptimization/pymoo)) and is licensed under
+the Apache License 2.0 (see `update_pinsga_file_in_pymoo-pi-emo/LICENSE-APACHE`).
 
 ## Contact
 
-Aditi Singh – aditi.singh@ufz.de/aditisinghxds@gmail.com
+Aditi Singh – aditi.singh@ufz.de / aditisinghxds@gmail.com

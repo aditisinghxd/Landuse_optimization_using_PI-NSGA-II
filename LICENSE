@@ -2,12 +2,16 @@ Copyright (c) 2025 Aditi Singh
 
 All rights reserved.
 
-This repository contains research code associated with an ongoing and/or
-planned academic publication.
+This repository contains research code associated with an academic article
+that is currently under review.
 
 The code is made available for review and reproducibility purposes only.
 No part of this code may be copied, modified, redistributed, or used to
 produce derivative works without explicit written permission from the author.
 
-Permission for reuse may be granted after formal publication of the
-associated research.
+An open-source license will be applied upon publication of the associated
+article.
+
+Exception: the file update_pinsga_file_in_pymoo-pi-emo/pinsga2.py is a
+modified version of a file from pymoo-pi-emo / pymoo and is licensed under
+the Apache License, Version 2.0 (see update_pinsga_file_in_pymoo-pi-emo/LICENSE-APACHE).

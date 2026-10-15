@@ -147,4 +147,4 @@ of pymoo's PI-NSGA-II implementation and remains under pymoo's Apache License 2.
 
 ## Contact
 
-Aditi Singh – [your email]
+Aditi Singh – aditi.singh@ufz.de/aditisinghxds@gmail.com
